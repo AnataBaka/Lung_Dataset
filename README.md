@@ -11,20 +11,20 @@ Add an explanation of the algorithm and how it works. Make sure to include detai
 ## Running this project
 
 1. First, begin by setting up an SSH conection with your Jetson Nano (with jetson-Inference coeligured) and opening a functioning terminal.
-   
-3. Run this commands to update your installer. You will be prompted to enter your password.
-sudo apt-get update
-3. Run this command to install cmsudo apt-get install git cmake
-4. Use cd commands to change directories until you are in your jetson-inference/python/training/dassification/data
-cd jetson-inference/python/training/classification/data
-5. Download and extract dataset
-[https:/www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data](https://www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data)
-6. cd back to 'classification' directory, and then cd into the 'models' directory
-cd..cd models
-7. Run this command to download the skin cancer classification model.
-git clone -recursive https://github.com/isamarquezg/skincancer
-8. cd back to 'classification' directory
-cd..
-9. Use the following command to make sure that the model is on the nano. You should see a file called2. Make sure to include any required libraries that need to be installed for your project to run.
+2. Run this commands to update your installer. You will be prompted to enter your password.
+ sudo apt-get update
+3. Run this command to install cmake
+ sudo apt-get install git cmake
+5. Use cd commands to change directories until you are in your jetson-inference/python/training/dassification/data
+ cd jetson-inference/python/training/classification/data
+6. Download and extract dataset
+ [https:/www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data](https://www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data)
+7. cd back to 'classification' directory, and then cd into the 'models' directory
+ cd..cd models
+8. Run this command to download the skin cancer classification model.
+ git clone -recursive https://github.com/isamarquezg/skincancer
+9. cd back to 'classification' directory
+ cd..
+10. Use the following command to make sure that the model is on the nano. You should see a file called2. Make sure to include any required libraries that need to be installed for your project to run.
 
 [View a video explanation here](video link)
