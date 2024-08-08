@@ -21,4 +21,5 @@ Running this project
 8. Run the model using imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/Testing/IMAGE_NAME.jpg IMAGEOUTPUTNAME.jpg
 9. Your output will be done and the image will be sent to data/lungs_dataset/test/Testing/IMAGEOUTPUTNAME.jpg
 
-[View a video explanation here](video link)
+[[View a video explanation here](video link)
+](https://youtu.be/wHs0Z1qPO5w)
