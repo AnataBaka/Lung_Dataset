@@ -1,30 +1,24 @@
 # Lung_Dataset
 
 The purpose of this model is to determine whether in a lungs they are healthy, opaque, or have viral pneumonia contained within them.
-![lung_opactiy](https://github.com/user-attachments/assets/1a8a66c7-0de2-4e4f-b3fd-161e460aedd7)
-![pneumonia](https://github.com/user-attachments/assets/f81c8772-4a9b-43ea-86d7-d9d2e42dbd01)
+![lung_opacity](https://github.com/user-attachments/assets/f853fee9-d4de-450f-9888-8cf512529f69)
+![pneumonia](https://github.com/user-attachments/assets/0f7abba6-b5ba-421e-b123-5f0e7615e006)
+
 
 ## The Algorithm
 
-Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
-
+This AI was trained on images of lung x-rays with some being normal, others being opaque lungs, and the final ones having viral_pneumonia. Trained on these datasets the model is able to determine whether an image of lungs is opaque, normal, or is infected with viral pneumonia.
 ## Running this project
 
-1. First, begin by setting up an SSH conection with your Jetson Nano (with jetson-Inference coeligured) and opening a functioning terminal.
-2. Run this commands to update your installer. You will be prompted to enter your password.
- sudo apt-get update
-3. Run this command to install cmake
- sudo apt-get install git cmake
-5. Use cd commands to change directories until you are in your jetson-inference/python/training/dassification/data
- cd jetson-inference/python/training/classification/data
-6. Download and extract dataset
- [https:/www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data](https://www.kaggle.com/datasets/fatemehmehrparvar/lung-disease/data)
-7. cd back to 'classification' directory, and then cd into the 'models' directory
- cd..cd models
-8. Run this command to download the skin cancer classification model.
- git clone -recursive https://github.com/isamarquezg/skincancer
-9. cd back to 'classification' directory
- cd..
-10. Use the following command to make sure that the model is on the nano. You should see a file called2. Make sure to include any required libraries that need to be installed for your project to run.
+Running this project
+1. Setup your Jetson Nano and Install VScode
+2. Connect Jetson Nano onto your computer hotspot. Write down your Jetson Nano IP address for later use
+3. Connect your VScode to your Jetson Nano using Connect Host and ssh nvidia@IPAddress
+4. Open the NVIDIA home folder
+5. Open the terminal and use cd jetson-inference/python/training/classification to enter the needed directory
+6. Use NET=models/lungs_dataset and DATASET=data/lungs_dataset to set NET and DATASET for later reference
+7. Move the picture of the lungs into the into the lungs_dataset Testing folder
+8. Run the model using imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt $DATASET/test/Testing/IMAGE_NAME.jpg IMAGEOUTPUTNAME.jpg
+9. Your output will be done and the image will be sent to data/lungs_dataset/test/Testing/IMAGEOUTPUTNAME.jpg
 
 [View a video explanation here](video link)
